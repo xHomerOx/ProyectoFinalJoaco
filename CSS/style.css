@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+.b-container{
+    background-color: rgb(146, 110, 57);
+}
+.b-container main div {
+    display: flex;
+    justify-content: center;
+    font-family: 'Counter-Strike', sans-serif;
+}
+.b-container main div h1{
+    padding-top:  4rem;
+    font-size: 50px;
+}
+.b-container main div h3{
+    padding-top: 2rem;
+    font-size: 30px;
+}
+.b-container main div a img{
+ width: 200px;
+ padding: 3rem;
+}
+.inferno {
+    background-image: url('../img/inferno1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
