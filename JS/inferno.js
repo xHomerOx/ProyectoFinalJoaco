@@ -19,18 +19,21 @@ weapon.forEach((item, index) => {
     weapon[0] = {
         name : 'AK-47',
         bullets : 30,
+        remainBullets: 30,
         damage : 50
     };
 
     weapon[1] = {
         name : 'Desert Eagle',
         bullets : 7,
+        remainBullets: 7,
         damage : 300
     };
 
     weapon[2] = {
         name : 'M4',
         bullets : 30,
+        remainBullets: 30,
         damage : 40
     };
 });
@@ -114,7 +117,10 @@ while(foundWeapon.bullets > 0 && foundTarget.armor > 0 ){
     if(foundTarget.armor > 0){
         foundTarget.armor -= damage;
         if(foundTarget.armor <= 0){
-                console.log(`¡Derribaste al objetivo ${foundTarget.name} con ${foundWeapon.bullets} `)
+                const leftBullets = foundWeapon.remainBullets - foundWeapon.bullets;
+                console.log(`¡Derribaste al objetivo ${foundTarget.name} con ${leftBullets}`);
+                const currentBullets = foundWeapon.remainBullets - leftBullets;
+                console.log("Balas restantes: " + currentBullets);
         }else{
             console.log(`Le diste al objetivo ${foundTarget.name}. Armadura restante: ${foundTarget.armor}`)
         }
